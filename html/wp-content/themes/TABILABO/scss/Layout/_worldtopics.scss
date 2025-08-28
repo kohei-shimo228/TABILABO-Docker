@@ -1,0 +1,40 @@
+@use "../Foundation/variables" as *; // 変数をインポート
+
+.l-worldtopics{
+    width:100%;
+    height:auto;
+    min-height: 40vh;
+    background-color: white;
+    padding:1em 0;
+
+    &__title{
+        margin:2% auto;
+        display:block;
+        width:10%;
+        height:auto;
+    }
+
+    &__container{
+        width:40%;
+        height:auto;
+        min-height:30vh;
+        margin:0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

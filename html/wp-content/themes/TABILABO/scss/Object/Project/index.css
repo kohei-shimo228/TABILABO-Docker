@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/*いじるな*/
+.p-articletype {
+  width: auto;
+  height: 10%;
+  z-index: 10;
+  display: inline-block;
+  position: absolute;
+  color: #ffffff;
+  font-size: x-small;
+  background-size: 20px 30px;
+}
+.p-articletype--PR {
+  background-color: #646464; /* 赤色の背景 */
+  color: #ffffff; /* 白色の文字 */
+  padding: 0.5em; /* パディングを追加 */
+  border-radius: 5px; /* 角を丸く */
+  font-weight: bold; /* 太字にする */
+}
+.p-articletype--ACTIVITY {
+  background-color: #ffb20a; /* 赤色の背景 */
+  color: #ffffff; /* 白色の文字 */
+  padding: 0.5em; /* パディングを追加 */
+  border-radius: 5px; /* 角を丸く */
+  font-weight: bold; /* 太字にする */
+}
+.p-articletype--ITEM {
+  background-color: #0dc15b; /* 赤色の背景 */
+  color: #ffffff; /* 白色の文字 */
+  padding: 0.5em; /* パディングを追加 */
+  border-radius: 5px; /* 角を丸く */
+  font-weight: bold; /* 太字にする */
+}
+.p-articletype--WELL-BEING {
+  background-color: #4d7ed8; /* 赤色の背景 */
+  color: #ffffff; /* 白色の文字 */
+  padding: 0.5em; /* パディングを追加 */
+  border-radius: 5px; /* 角を丸く */
+  font-weight: bold; /* 太字にする */
+}
+.p-articletype--ISSUE {
+  background-color: #009a0a; /* 赤色の背景 */
+  color: #ffffff; /* 白色の文字 */
+  padding: 0.5em; /* パディングを追加 */
+  border-radius: 5px; /* 角を丸く */
+  font-weight: bold; /* 太字にする */
+}
+.p-articletype--CULTURE {
+  background-color: #654732; /* 赤色の背景 */
+  color: #ffffff; /* 白色の文字 */
+  padding: 0.5em; /* パディングを追加 */
+  border-radius: 5px; /* 角を丸く */
+  font-weight: bold; /* 太字にする */
+}
+.p-articletype--LOVE {
+  background-color: #a94949; /* 赤色の背景 */
+  color: #ffffff; /* 白色の文字 */
+  padding: 0.5em; /* パディングを追加 */
+  border-radius: 5px; /* 角を丸く */
+  font-weight: bold; /* 太字にする */
+}
+
+.p-hero {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(124, 131, 230);
+  display: flex;
+  aspect-ratio: 16/9;
+}
+.p-hero__main {
+  flex: 2 0 500px;
+  background: red;
+}
+.p-hero__sub {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.p-hero__sub__top {
+  flex: 1;
+  background-color: blue;
+}
+.p-hero__sub__bottom {
+  flex: 1;
+  background-color: darkslateblue;
+}
+
+.p-swiper { /*swiper-wraper*/
+  display: flex;
+  width: 50%;
+  height: 50%;
+}
+.p-swiper__slide { /*swiper-slide*/
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=index.css.map */

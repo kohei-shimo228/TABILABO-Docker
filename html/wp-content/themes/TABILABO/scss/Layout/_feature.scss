@@ -1,0 +1,45 @@
+@use "../Foundation/variables" as *; // 変数をインポート
+
+
+
+.l-feature{
+    width:100%;
+    height:auto;
+    min-height:30vh;
+    background-color: black;
+    padding:1em 0;
+    &__title{
+        text-align: center;
+        font-size: 1.2em;
+        color: white;
+    }
+    &__container{
+        margin:0 auto;
+        width:60%;
+        height:auto;
+        min-height:20vh;
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap:10px;
+        place-content:center;
+
+    }
+
+    &__contents{
+        display: flex;
+        aspect-ratio: 1/1;
+        width:100%;
+        height:auto;
+        background-color:#326479;
+
+    }
+}
+
+
+
+
+
+
+
+

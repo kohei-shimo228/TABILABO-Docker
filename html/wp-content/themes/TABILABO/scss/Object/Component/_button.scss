@@ -1,0 +1,77 @@
+@use "../../Foundation/variables" as *; // 変数をインポート
+/*いじるな*/
+.c-button{
+    text-align: center;
+    font-family: $font-family;
+    &__ShowMore{
+        display:block;
+        margin: 3% auto;
+
+        line-height: 25%;
+        background-color: red;
+        border-radius:2em;
+        color: white;
+        font-size: 1em;
+        border: none;
+        cursor: pointer;
+        width:auto;
+        padding:1em 2em;
+        
+        transition: all 0.3s ease;
+    }
+    &__ShowMore:hover{
+        background-color: darkred;
+        transform: scale(1.2);
+    }
+    
+    &__submit{
+        width:auto;
+        display:inline-block;
+        line-height: 25%;
+        background-color: rgb(160, 160, 160);
+        border-radius:10px;
+        color: white;
+        font-size: 1em;
+        border: none;
+        cursor: pointer;
+        padding:1em;
+        margin:0 1em;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: darkgray;
+            transform: scale(1.05);
+        }
+    }
+    &__play{
+        position:absolute;
+        width:25%;
+        height:25%;
+        display:block;
+        text-align: center;
+        margin: 0 auto;
+        top: 25%;
+        left: 0;
+        right: 0;
+    }
+    &__swiper-next,
+    &__swiper-prev{
+        color: white;
+
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

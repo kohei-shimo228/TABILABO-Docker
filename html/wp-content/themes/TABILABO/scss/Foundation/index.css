@@ -1,0 +1,19 @@
+@charset "UTF-8";
+:root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "segoe ui", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  color: #000;
+  background-color: #f4f4f4;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden; /* 横スクロールを防ぐ */
+  scroll-behavior: smooth; /* スムーズスクロール */
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=index.css.map */

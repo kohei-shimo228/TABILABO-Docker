@@ -1,0 +1,64 @@
+@use "../Foundation/variables" as *; // 変数をインポート
+.l-article{
+    &__title{
+        font-size: 2em;
+        font-family: $font-family;
+        text-align: center;
+    }
+    &__container {
+        position: relative;
+        box-sizing: border-box;
+        display:flex; /* フレックスコンテナを作成 */
+        gap:2%;
+        flex-wrap: wrap; /* アイテムを折り返す */
+        flex-direction: row;
+        height:auto;
+        
+
+        /*中央寄りになるように左右を寄せてある*/
+        padding-left:10%; 
+        padding-right:10%;
+
+        .article {
+            display: inline-block;
+            width: 30%;
+            height:40%;
+            flex:1 1 45%; /* 各記事の幅を50%に設定し、間隔を考慮 */
+            position: relative;
+            box-sizing: content;
+            justify-content:center; /* アイテム間にスペースを配置 */
+            align-items: center;
+            transition: transform 0.3s; /* ホバー時のアニメーション */
+
+            img{
+                display: inline;
+                height:auto; /* 高さに合わせる */
+                width: auto;
+                max-width: 100%;;
+            }
+            h3{
+                font-size:x-large;
+            }
+            p{
+                line-clamp: 3;
+                text-overflow: ellipsis;
+            }
+
+
+        }
+        .article:nth-child(7n){
+            flex:1 1 100%;
+            width:100%;
+            height:auto;
+
+        }
+
+
+
+
+
+    }
+}
+    
+
+

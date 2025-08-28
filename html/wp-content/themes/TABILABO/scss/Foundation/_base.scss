@@ -1,0 +1,20 @@
+@use "./variables" as *; // 変数をインポート
+:root{
+    width:100vw;
+    height:100vh;
+    margin:0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: $font-family;
+    color: $font-color;
+    background-color: #f4f4f4;
+    font-size: $font-size;
+    line-height: 1.6;
+    overflow-x: hidden; /* 横スクロールを防ぐ */
+    scroll-behavior: smooth; /* スムーズスクロール */
+}
+
+
+a{
+    text-decoration: none;
+}

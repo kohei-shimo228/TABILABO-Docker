@@ -1,0 +1,27 @@
+@use "../../Foundation/variables" as *; // 変数をインポート
+/*いじるな*/
+.c-submit{
+    width: 25%;
+    display:inline-block;
+    line-height: 25%;
+    background-color: rgb(66, 66, 66);
+   
+    color: white;
+    font-size: 1em;
+    font-family: $font-family;
+    border: none;
+    cursor: pointer;
+    padding:0.75em 0;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: darkgray;
+        transform: scale(1.05);
+    }
+}
+
+
+
+
+

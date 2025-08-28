@@ -1,0 +1,34 @@
+@use "../../Foundation/variables" as *; // 変数をインポート
+
+.p-hero{
+    width:100vw;
+    height:100vh;
+    background:rgb(124, 131, 230);
+    display:flex;
+    aspect-ratio: 16/9;
+    &__main{
+        flex:2 0 500px;
+        background:red;
+    }
+    &__sub{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        &__top{
+            flex:1;
+            background-color: blue;
+        }
+        &__bottom{
+            flex:1;
+            background-color: darkslateblue;
+        }
+    }
+}
+
+
+
+
+
+
+
+

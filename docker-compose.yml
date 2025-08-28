@@ -1,0 +1,28 @@
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress
+    restart: always
+    depends_on:
+     - db
+    ports:
+      - "10090:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: wppass
+      WORDPRESS_DEBUG: 1 # デバッグモードON
+    volumes:
+      - ./html:/var/www/html
+
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: wppass
+    volumes:
+      - ./db.sql:/docker-entrypoint-initdb.d/db.sql

@@ -1,0 +1,22 @@
+@use "../../Foundation/variables" as *; // 変数をインポート
+
+.p-swiper{  /*swiper-wraper*/
+    display: flex;
+    width:50%;
+    height:50%;
+
+    &__slide{   /*swiper-slide*/
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        color: white;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+
+

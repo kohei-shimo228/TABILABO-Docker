@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/*いじるな*/
+.c-button {
+  text-align: center;
+  font-family: "segoe ui", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.c-button__ShowMore {
+  display: block;
+  margin: 3% auto;
+  line-height: 25%;
+  background-color: red;
+  border-radius: 2em;
+  color: white;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  padding: 1em 2em;
+  transition: all 0.3s ease;
+}
+.c-button__ShowMore:hover {
+  background-color: darkred;
+  transform: scale(1.2);
+}
+.c-button__submit {
+  width: auto;
+  display: inline-block;
+  line-height: 25%;
+  background-color: rgb(160, 160, 160);
+  border-radius: 10px;
+  color: white;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  padding: 1em;
+  margin: 0 1em;
+  transition: all 0.3s ease;
+}
+.c-button__submit:hover {
+  background-color: darkgray;
+  transform: scale(1.05);
+}
+.c-button__play {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  top: 25%;
+  left: 0;
+  right: 0;
+}
+.c-button__swiper-next, .c-button__swiper-prev {
+  color: white;
+}
+
+/*いじるな*/
+.c-footer-box {
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 0 1em;
+  margin: 0;
+  font-family: "segoe ui", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  flex: 1 1 calc(20% - 20px);
+  align-self: center;
+}
+.c-footer-box__image {
+  width: 100%;
+  height: auto;
+  top: 2em;
+  background-color: rgb(160, 160, 255);
+  display: block;
+  border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+  box-shadow: 1px 1px 5px rgb(0, 4, 255);
+  transition: all 0.5s ease;
+}
+.c-footer-box__title {
+  font-family: "segoe ui", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  width: 100%;
+  height: auto;
+  color: white;
+  font-size: 2vw;
+  display: block;
+  position: relative;
+  line-height: auto;
+  top: 2em;
+}
+.c-footer-box__icon {
+  color: white;
+  font-size: 2em;
+  display: inline-block;
+  margin: 0 1em;
+  transition: all 0.5s ease;
+}
+.c-footer-box__icon:hover {
+  transform: scale(1.5);
+  box-shadow: 3px 3px 5px rgb(0, 4, 255) -3px -3px 5px rgb(0, 4, 255);
+}
+
+.c-footer-box img:hover {
+  box-shadow: 5px 5px 50px rgb(0, 4, 255);
+  background-color: rgb(0, 0, 255);
+}
+
+/*いじるな*/
+.c-submit {
+  width: 25%;
+  display: inline-block;
+  line-height: 25%;
+  background-color: rgb(66, 66, 66);
+  color: white;
+  font-size: 1em;
+  font-family: "segoe ui", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  border: none;
+  cursor: pointer;
+  padding: 0.75em 0;
+  transition: all 0.3s ease;
+}
+.c-submit:hover {
+  background-color: darkgray;
+  transform: scale(1.05);
+}
+
+.c-videos {
+  width: 100%;
+  height: 100%;
+  font-family: "segoe ui", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  display: block;
+  position: relative;
+  aspect-ratio: 1.4/1;
+}
+.c-videos__media {
+  display: inline;
+  align-items: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 80%;
+}
+.c-videos__title {
+  width: 100%;
+  height: 3em;
+  display: block;
+  width: 100%;
+  overflow-wrap: anywhere;
+  color: white;
+  font-size: 1.5em;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/*いじるな*/
+.c-article-card {
+  width: 80%;
+  height: auto;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  padding: auto 0;
+}
+.c-article-card__eyecatch {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+.c-article-card__eyecatch img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 4/3;
+}
+.c-article-card__title {
+  width: 100%;
+  height: auto;
+  text-align: left;
+  color: #000;
+  font-size: 2em;
+}
+.c-article-card__text {
+  width: 100%;
+  height: auto;
+  min-height: 2em;
+  text-align: left;
+  font-size: 1em;
+}
+.c-article-card--hero {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.c-article-card--hero__eyecatch {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+.c-article-card--hero__eyecatch img {
+  width: 120%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 16/9;
+}
+.c-article-card--hero__title {
+  width: 100%;
+  height: auto;
+  text-align: left;
+  color: #000;
+  font-size: 1em;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  bottom: 2em;
+}
+.c-article-card--category {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.c-article-card--category__eyecatch {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+}
+.c-article-card--category__eyecatch img {
+  display: inline;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 16/9;
+}
+.c-article-card--category__title {
+  width: 100%;
+  font-family: "segoe ui", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-size: 1, 5em;
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  line-clamp: 2;
+  text-overflow: ellipsis;
+}
+.c-article-card--worldtopic {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 10% auto;
+}
+.c-article-card--worldtopic__text {
+  flex: 1 0 70%;
+  height: auto;
+  color: #000;
+  font-family: "segoe ui", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.c-article-card--worldtopic__text__title {
+  font-size: 200%;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 80%;
+  line-clamp: 2;
+  text-overflow: ellipsis;
+}
+.c-article-card--worldtopic__text__date {
+  display: block;
+  width: 100%;
+  height: 20%;
+}
+.c-article-card--worldtopic__eyecatch {
+  display: block;
+  align-content: center;
+  flex: 0 0 30%;
+  justify-content: center;
+  align-items: center;
+}
+.c-article-card--worldtopic__eyecatch img {
+  display: block;
+  width: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 4/3;
+}/*# sourceMappingURL=index.css.map */

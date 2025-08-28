@@ -1,0 +1,76 @@
+$font-color:#ffffff;
+/*いじるな*/
+.p-articletype {
+    width:auto;
+    height:10%;
+    z-index: 10;
+    display: inline-block;
+    position: absolute;
+    color: $font-color;
+    font-size:x-small;
+    background-size: 20px 30px;
+    &--PR{
+        background-color: #646464; /* 赤色の背景 */
+        color: $font-color; /* 白色の文字 */
+        padding: 0.5em; /* パディングを追加 */
+        border-radius: 5px; /* 角を丸く */
+        font-weight: bold; /* 太字にする */
+    }
+
+    
+    &--ACTIVITY{
+        background-color: #ffb20a; /* 赤色の背景 */
+        color: $font-color; /* 白色の文字 */
+        padding: 0.5em; /* パディングを追加 */
+        border-radius: 5px; /* 角を丸く */
+        font-weight: bold; /* 太字にする */
+    }
+
+    
+    &--ITEM{
+        background-color: #0dc15b; /* 赤色の背景 */
+        color: $font-color; /* 白色の文字 */
+        padding: 0.5em; /* パディングを追加 */
+        border-radius: 5px; /* 角を丸く */
+        font-weight: bold; /* 太字にする */
+    }
+
+    
+    &--WELL-BEING{
+        background-color: #4d7ed8; /* 赤色の背景 */
+        color: $font-color; /* 白色の文字 */
+        padding: 0.5em; /* パディングを追加 */
+        border-radius: 5px; /* 角を丸く */
+        font-weight: bold; /* 太字にする */
+    }
+
+    
+    &--ISSUE{
+        background-color: #009a0a; /* 赤色の背景 */
+        color: $font-color; /* 白色の文字 */
+        padding: 0.5em; /* パディングを追加 */
+        border-radius: 5px; /* 角を丸く */
+        font-weight: bold; /* 太字にする */
+    }
+
+    
+    &--CULTURE{
+        background-color: #654732; /* 赤色の背景 */
+        color: $font-color; /* 白色の文字 */
+        padding: 0.5em; /* パディングを追加 */
+        border-radius: 5px; /* 角を丸く */
+        font-weight: bold; /* 太字にする */
+    }
+
+    
+    &--LOVE{
+        background-color: #a94949; /* 赤色の背景 */
+        color: $font-color; /* 白色の文字 */
+        padding: 0.5em; /* パディングを追加 */
+        border-radius: 5px; /* 角を丸く */
+        font-weight: bold; /* 太字にする */
+    }
+
+}
+
+

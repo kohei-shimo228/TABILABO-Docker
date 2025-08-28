@@ -1,0 +1,51 @@
+@use "../Foundation/variables" as *;
+
+.l-home{
+    display:inline-block;
+    margin:0 25%;
+    justify-content: space-around;
+    width:50%;
+    
+    &__title{
+        text-align: center;
+        font-size: 4em;
+        font-family: $font-family;
+        margin:0.5em 0;
+        
+    }
+    &__container {
+        position: relative;
+        display:flex; /* フレックスコンテナを作成 */
+        flex-wrap:wrap; /* アイテムを折り返す */
+        flex-direction: row;
+        width:auto;
+        height:auto;
+        justify-content:space-around;
+        text-align: center;
+        article {
+            height:100%;
+            width:auto;
+            flex:1 1 50%;
+
+            transition: transform 0.3s; 
+        }
+        article:nth-child(7n){
+            flex:1 1 100%;
+            width:auto;
+            height:100%;
+
+        }
+        
+
+
+
+
+    }
+}
+    
+
+
+
+
+
+

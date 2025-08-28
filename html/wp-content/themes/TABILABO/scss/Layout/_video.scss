@@ -1,0 +1,43 @@
+@use "../Foundation/variables" as *; // 変数をインポート
+
+@use "../Foundation/variables" as *; // 変数をインポート
+
+.l-video{
+    display:block;
+    height: auto;
+    min-height:30vh;
+    width:auto;
+    background-color: black;
+    padding:2em;
+    overflow-x: hidden;
+    
+
+    /*こっちはいじらない*/
+    &__title{
+        font-family: $font-family;
+        color: white;
+        font-size: 1.5em;
+        display: block;
+        margin:1em auto;
+        text-align: center;
+            
+    }
+
+    &__swiper{  /**/
+        margin: 0 auto;
+        width: 80%;
+        height:120%;
+
+        background-color: rgb(255, 255, 81);
+    }
+}
+
+
+
+
+
+
+
+
+
+

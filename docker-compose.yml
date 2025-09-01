@@ -11,6 +11,8 @@ services:
       MYSQL_PASSWORD: wppassword
     volumes:
       - ./db.sql:/docker-entrypoint-initdb.d/db.sql
+      - ./mysql-data:/var/lib/mysql
+
 
 
   wordpress:
@@ -18,9 +20,10 @@ services:
       - db
     image: wordpress:latest
     ports:
-      - "10090:80"
+      - "8080:80"
     volumes:
-      - ./html:/var/www/html
+      - wp_data:/var/www/html
+      - ./html/wp-content/themes:/var/www/html/wp-content/themes
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wpuser
@@ -34,4 +37,8 @@ services:
     depends_on:
       - db
     ports:
-      - 10099:80
+      - 8000:80
+
+volumes:
+  db_data:
+  wp_data:

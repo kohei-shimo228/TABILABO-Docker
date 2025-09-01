@@ -6,7 +6,33 @@
 
             <div class="l-home">
             <div class="l-home__container">
-                <?php search_posts(array('posts_per_page'=>20));?>
+                <?php
+                    $article_Query=new WP_Query(array('posts_per_page'=>20));
+                    if($article_Query->have_posts()){
+                        while($article_Query->have_posts()){
+                            $article_Query->the_post();
+                            echo '<article>';
+                                echo '<a href=';
+                                echo the_permalink();
+                                echo ' class="c-article-card">';    
+                                echo '<div class=c-article-card__eyecatch>';
+                                    get_template_part('template-parts/category','label');
+                                    the_post_thumbnail();
+                                echo '</div>';
+                                echo '<div class=c-article-card__title>';
+                                the_title();
+                                echo '</div>';
+                                echo '<div class=c-article-card__text>';
+                                the_excerpt();
+                                echo'</div>';
+                                echo '</a>';
+                            echo '</article>';
+                        }
+                    }else{
+                        echo 'COMING SOON...';
+                    }
+                    wp_reset_postdata();
+                ?>
             </div>
 
         </div>

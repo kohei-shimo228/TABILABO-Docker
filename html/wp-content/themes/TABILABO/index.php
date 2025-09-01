@@ -3,27 +3,69 @@
     <div class="p-hero">
         <div class="p-hero__main">
                 <div class="c-article-card--hero">
-                <a href="<?php the_permalink();?>">
-                    <div class="c-article-card--hero__eyecatch"><?php the_post_thumbnail();?></div>
-                    <div class="c-article-card--hero__title"><?php the_title();?></div>
-                </a>
+                    <?php
+                        $args = array(
+                            'name' => 'relaxing-drinks', // 投稿スラッグを指定
+                            'post_type' => 'post'
+                        );
+                        $query = new WP_Query($args);
+
+                        if ($query->have_posts()) :
+                            while ($query->have_posts()) : $query->the_post(); ?>
+                                <a href="<?php the_permalink();?>">
+                                    <div class="c-article-card--hero__eyecatch"><?php the_post_thumbnail();?></div>
+                                    <div class="c-article-card--hero__title"><?php the_title();?></div>
+                                </a>
+                            <?php endwhile;
+                        endif;
+
+                        wp_reset_postdata();
+                    ?>
                 </div>
         </div>
         <div class="p-hero__sub">
             <div class="p-hero__sub__top">
                 <div class="c-article-card--hero">
-                    <a href="<?php the_permalink();?>">
-                        <div class="c-article-card--hero__eyecatch"><?php the_post_thumbnail();?></div>
-                        <div class="c-article-card--hero__title"><?php the_title();?></div>
-                    </a>
+                    <?php
+                        $args = array(
+                            'name' => 'strongest-language2025', // 投稿スラッグを指定
+                            'post_type' => 'post'
+                        );
+                        $query = new WP_Query($args);
+
+                        if ($query->have_posts()) :
+                            while ($query->have_posts()) : $query->the_post(); ?>
+                                <a href="<?php the_permalink();?>">
+                                    <div class="c-article-card--hero__eyecatch"><?php the_post_thumbnail();?></div>
+                                    <div class="c-article-card--hero__title"><?php the_title();?></div>
+                                </a>
+                            <?php endwhile;
+                        endif;
+
+                        wp_reset_postdata();
+                    ?>
                 </div>
             </div>
             <div class="p-hero__sub__bottom">
                 <div class="c-article-card--hero">
-                    <a href="<?php the_permalink();?>">
-                        <div class="c-article-card--hero__eyecatch"><?php the_post_thumbnail();?></div>
-                        <div class="c-article-card--hero__title"><?php the_title();?></div>
-                    </a>
+                    <?php
+                        $args = array(
+                            'name' => 'why-meme-dominated', // 投稿スラッグを指定
+                            'post_type' => 'post'
+                        );
+                        $query = new WP_Query($args);
+
+                        if ($query->have_posts()) :
+                            while ($query->have_posts()) : $query->the_post(); ?>
+                                <a href="<?php the_permalink();?>">
+                                    <div class="c-article-card--hero__eyecatch"><?php the_post_thumbnail();?></div>
+                                    <div class="c-article-card--hero__title"><?php the_title();?></div>
+                                </a>
+                            <?php endwhile;
+                        endif;
+
+                        wp_reset_postdata();
+                    ?>
                 </div>
             </div>
         </div>
@@ -34,8 +76,33 @@
         <div class="l-home">
             <div class="l-home__title">NEW ARRIVALS</div>
             <div class="l-home__container">
-                <?php search_posts(array('posts_per_page'=>14));?>
-                
+                <?php
+                    $article_Query=new WP_Query(array('posts_per_page'=>14));
+                    if($article_Query->have_posts()){
+                        while($article_Query->have_posts()){
+                            $article_Query->the_post();
+                            echo '<article>';
+                                echo '<a href=';
+                                echo the_permalink();
+                                echo ' class="c-article-card">';    
+                                echo '<div class=c-article-card__eyecatch>';
+                                    get_template_part('template-parts/category','label');
+                                    the_post_thumbnail();
+                                echo '</div>';
+                                echo '<div class=c-article-card__title>';
+                                the_title();
+                                echo '</div>';
+                                echo '<div class=c-article-card__text>';
+                                the_excerpt();
+                                echo'</div>';
+                                echo '</a>';
+                            echo '</article>';
+                        }
+                    }else{
+                        echo 'COMING SOON...';
+                    }
+                    wp_reset_postdata();
+                ?>
             </div>
             <button class="c-button__ShowMore" type="button">VIEW MORE</button>
         </div>
@@ -45,7 +112,31 @@
             <div class="l-category__container">
                 <div class="l-category__container__title">LOVE</div>
                 <div class="l-category__container__contents">
-                    <?php search_posts__category('love',3);?>                
+                    <?php
+                        $article_Query=new WP_Query(array('category_name'=>'love','posts_per_page'=>3,'orderby'=>'rand'));
+                            if($article_Query->have_posts()){
+                                while($article_Query->have_posts()){
+                                    $article_Query->the_post();
+                                    echo '<article>';
+                                        echo '<a href=';
+                                        echo the_permalink();
+                                        echo ' class="c-article-card--category">';    
+                                        echo '<div class=c-article-card--category__eyecatch>';
+                                            the_post_thumbnail();
+                                        echo '</div>';
+                                        echo '<div class=c-article-card--category__title>';
+                                        the_title();
+                                        echo '</div>';
+
+                                        echo '</a>';
+                                    echo '</article>';
+                                }
+                            }else{
+                                echo 'COMING SOON...';
+                            }
+                            wp_reset_postdata();                    
+                    ?>
+                
                 </div>
                 <button class="c-button__ShowMore" type="button">VIEW MORE</button>
             </div>
@@ -53,7 +144,30 @@
             <div class="l-category__container">
                 <div class="l-category__container__title">ITEM</div>
                 <div class="l-category__container__contents">
-                    <?php search_posts__category('item',3);?>                
+                    <?php
+                        $article_Query=new WP_Query(array('category_name'=>'item','posts_per_page'=>3,'orderby'=>'rand'));
+                            if($article_Query->have_posts()){
+                                while($article_Query->have_posts()){
+                                    $article_Query->the_post();
+                                    echo '<article>';
+                                        echo '<a href=';
+                                        echo the_permalink();
+                                        echo ' class="c-article-card--category">';    
+                                        echo '<div class=c-article-card--category__eyecatch>';
+                                            the_post_thumbnail();
+                                        echo '</div>';
+                                        echo '<div class=c-article-card--category__title>';
+                                        the_title();
+                                        echo '</div>';
+
+                                        echo '</a>';
+                                    echo '</article>';
+                                }
+                            }else{
+                                echo 'COMING SOON...';
+                            }
+                            wp_reset_postdata();                    
+                    ?>                                    
                 </div>                
                 <button class="c-button__ShowMore" type="button">VIEW MORE</button>
             </div>            
@@ -61,7 +175,30 @@
             <div class="l-category__container">
                 <div class="l-category__container__title">WELL-BEING</div>
                 <div class="l-category__container__contents">
-                    <?php search_posts__category('well-being',3);?>                
+                    <?php
+                        $article_Query=new WP_Query(array('category_name'=>'well-being','posts_per_page'=>3,'orderby'=>'rand'));
+                            if($article_Query->have_posts()){
+                                while($article_Query->have_posts()){
+                                    $article_Query->the_post();
+                                    echo '<article>';
+                                        echo '<a href=';
+                                        echo the_permalink();
+                                        echo ' class="c-article-card--category">';    
+                                        echo '<div class=c-article-card--category__eyecatch>';
+                                            the_post_thumbnail();
+                                        echo '</div>';
+                                        echo '<div class=c-article-card--category__title>';
+                                        the_title();
+                                        echo '</div>';
+
+                                        echo '</a>';
+                                    echo '</article>';
+                                }
+                            }else{
+                                echo 'COMING SOON...';
+                            }
+                            wp_reset_postdata();                    
+                    ?>                                  
                 </div>            
                 <button class="c-button__ShowMore" type="button">VIEW MORE</button>
             </div>   
@@ -86,7 +223,36 @@
         <div class="l-worldtopics">
             <img src="<?php echo get_template_directory_uri(); ?>/img/worldtopics_title.svg" class="l-worldtopics__title">
             <div class="l-worldtopics__container">
-                <?php get_worldtopics();?>
+                <?php
+                    $article_Query=new WP_Query(array('tag'=>'worldtopic','posts_per_page'=>6));
+                    if($article_Query->have_posts()){
+                        while($article_Query->have_posts()){
+                            $article_Query->the_post();
+                            echo '<article>';
+                                echo '<a href=';
+                                echo the_permalink();
+                                echo ' class=c-article-card--worldtopic>';    
+                                echo '<div class=c-article-card--worldtopic__text>';
+                                    echo '<div class=c-article-card--worldtopic__text__title>';
+                                    the_title();
+                                    echo '</div>';
+
+                                    echo '<div class=c-article-card--worldtopic__text__date>';
+                                    the_modified_date();
+                                    echo '</div>';
+                                echo '</div>';  
+                                
+                                echo '<div class=c-article-card--category__eyecatch>';
+                                    the_post_thumbnail();
+                                echo '</div>';
+                                echo '</a>';
+                            echo '</article>';
+                        }
+                    }else{
+                        echo 'COMING SOON...';
+                    }
+                    wp_reset_postdata();                
+                ?>
             </div>
             <button class="c-button__ShowMore" type="button">VIEW MORE</button>
         </div>

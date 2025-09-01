@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<body class="l-body">
     <div class="p-hero">
         <div class="p-hero__main">
                 <div class="c-article-card--hero">

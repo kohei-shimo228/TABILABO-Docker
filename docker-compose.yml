@@ -24,6 +24,7 @@ services:
     volumes:
       - wp_data:/var/www/html
       - ./html/wp-content/themes:/var/www/html/wp-content/themes
+      - ./html/wp-content/uploads:/var/www/html/wp-content/uploads
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wpuser
@@ -32,7 +33,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
-    container_name: phpmyadmin
+    container_name: php-admin
     restart: always
     depends_on:
       - db
